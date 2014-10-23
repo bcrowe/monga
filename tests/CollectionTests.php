@@ -25,16 +25,7 @@ class CollectionTests extends PHPUnit_Framework_TestCase
 	public function tearDown()
 	{
 		$this->database->collection('__unit_testing__')->getCollection()->drop();
-		// $this->connection->dropDatabase('__unit_testing__');
 		$this->database = null;
-	}
-
-	/**
-	 * @expectedException Exception
-	 */
-	public function testInvalidConstructor()
-	{
-		$collection = new Collection(false);
 	}
 
 	public function testGetCollection()
